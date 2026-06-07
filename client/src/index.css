@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small helper for dark mode and glass */
+body.dark {
+  background-color: #0f172a;
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body, h1, h2, h3, h4, button, input, textarea {
+  font-family: 'Inter', sans-serif;
+}
+ 
+.hero-bg {
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+ 
+.community-card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+ 
+.community-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  border-radius: inherit;
+}
